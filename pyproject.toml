@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi_task_sentiment"
+version = "0.1.0"
+authors = [{name = "Example"}]
+description = "Multi-task sentiment analysis example"
+readme = "multi_task_sentiment/README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "transformers>=4.38",
+    "datasets",
+    "evaluate",
+]
+
+[project.scripts]
+train-multi-sentiment = "multi_task_sentiment.train:main"
